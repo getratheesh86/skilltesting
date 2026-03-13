@@ -1,0 +1,76 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Evidence Bundle Manifest",
+  "description": "Standard manifest for governance-ready evidence bundles",
+  "type": "object",
+  "required": ["target", "runId", "timestamp", "stages", "testResults", "artifacts"],
+  "properties": {
+    "target": {
+      "type": "string",
+      "description": "Target application or API name"
+    },
+    "runId": {
+      "type": "string",
+      "description": "Unique run identifier (e.g., YYYY-MM-DD-HHmmss)"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Run timestamp"
+    },
+    "stages": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["ingest", "generate", "validate", "execute", "publish"]
+      },
+      "description": "Pipeline stages executed"
+    },
+    "testResults": {
+      "type": "object",
+      "required": ["total", "passed", "failed"],
+      "properties": {
+        "total": { "type": "integer" },
+        "passed": { "type": "integer" },
+        "failed": { "type": "integer" },
+        "skipped": { "type": "integer" }
+      }
+    },
+    "artifacts": {
+      "type": "object",
+      "properties": {
+        "junit": { "type": "string", "description": "Path to JUnit XML" },
+        "html": { "type": "string", "description": "Path to HTML report" },
+        "screenshots": { "type": "string", "description": "Path to screenshots directory" },
+        "traces": { "type": "string", "description": "Path to trace files" },
+        "logs": { "type": "string", "description": "Path to log files" }
+      }
+    },
+    "environment": {
+      "type": "object",
+      "properties": {
+        "framework": { "type": "string" },
+        "language": { "type": "string" },
+        "browser": { "type": "string" },
+        "runner": { "type": "string" }
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "properties": {
+        "source": { "type": "string" },
+        "generatedBy": { "type": "string" },
+        "generatedAt": { "type": "string", "format": "date-time" },
+        "contextPack": { "type": "string" }
+      }
+    },
+    "governance": {
+      "type": "object",
+      "properties": {
+        "qualityPassportStatus": { "type": "string", "enum": ["pass", "fail", "pending"] },
+        "gateInputs": { "type": "array", "items": { "type": "string" } },
+        "retentionPolicy": { "type": "string" }
+      }
+    }
+  }
+}

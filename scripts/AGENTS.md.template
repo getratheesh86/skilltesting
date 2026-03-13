@@ -1,0 +1,113 @@
+# AGENTS.md — {{PROJECT_NAME}}
+
+IMPORTANT: Prefer retrieval-led reasoning over pre-training-led reasoning for any testing, generation, or validation tasks. Read the relevant SKILL.md file before generating artifacts. Do not rely on training data alone.
+
+## Project Overview
+
+{{PROJECT_DESCRIPTION}}
+
+## Technology Stack
+
+- **Language:** {{LANGUAGE}} (e.g., Java 17+, TypeScript, Python)
+- **Build tool:** {{BUILD_TOOL}} (e.g., Maven, Gradle, npm)
+- **Test framework:** {{TEST_FRAMEWORK}} (e.g., JUnit 5, Playwright, pytest)
+- **CI/CD:** {{CI_CD}} (e.g., Azure DevOps)
+
+## Knowledge Index
+
+When working on tasks in this project, use this index to find the right skill and prompt. Read the SKILL.md file for full procedural details before acting.
+
+### Installed Skills
+
+|Skill|Path|When to use|
+|---|---|---|
+|context-ingestion|.github/skills/context-ingestion/SKILL.md|Onboarding new target; updating context|
+|api-test-generation|.github/skills/api-test-generation/SKILL.md|API test generation from specs|
+|web-ui-test-generation|.github/skills/web-ui-test-generation/SKILL.md|Web UI test generation|
+|swing-ui-test-generation|.github/skills/swing-ui-test-generation/SKILL.md|Swing UI test generation|
+|test-data-management|.github/skills/test-data-management/SKILL.md|Test data provisioning|
+|orchestration-cli|.github/skills/orchestration-cli/SKILL.md|End-to-end pipeline|
+|self-healing|.github/skills/self-healing/SKILL.md|Post-failure repair|
+|validation-evidence|.github/skills/validation-evidence/SKILL.md|Artifact validation + evidence|
+|ado-pipelines-governance|.github/skills/ado-pipelines-governance/SKILL.md|ADO pipeline setup|
+|owasp-security|.github/skills/owasp-security/SKILL.md|Security review|
+
+### Installed Prompts
+
+|Prompt|Path|Use when|
+|---|---|---|
+|context-ingestion|.github/prompts/context-ingestion.prompt.md|Normalizing source docs|
+|generate-api-test-pack|.github/prompts/generate-api-test-pack.prompt.md|Generating API tests|
+|generate-web-test-pack|.github/prompts/generate-web-test-pack.prompt.md|Generating web tests|
+|generate-swing-test-pack|.github/prompts/generate-swing-test-pack.prompt.md|Generating Swing tests|
+|create-review-packet|.github/prompts/create-review-packet.prompt.md|Human review packets|
+
+## Decision Tree
+
+```
+Need to onboard a target?
+  → Read .github/skills/context-ingestion/SKILL.md
+  → Use .github/prompts/context-ingestion.prompt.md
+
+Need to generate tests?
+  → API: Read .github/skills/api-test-generation/SKILL.md
+  → Web: Read .github/skills/web-ui-test-generation/SKILL.md
+  → Swing: Read .github/skills/swing-ui-test-generation/SKILL.md
+
+Need to validate + package evidence?
+  → Read .github/skills/validation-evidence/SKILL.md
+
+Need to run the full pipeline?
+  → Read .github/skills/orchestration-cli/SKILL.md
+  → Pipeline: ingest → generate → validate → execute → publish
+```
+
+## Cross-Cutting Rules
+
+### Provenance
+Every artifact records: source path/URL, timestamp, owner, target mapping.
+
+### Redaction
+No secrets, credentials, or sensitive production data. Redact and record.
+
+### Evidence
+Every run produces: JUnit XML/JSON, human summary, diagnostics, provenance.
+
+### Security
+No hardcoded secrets. Input validation. Parameterized queries. Dependency scanning.
+
+## Project Structure
+
+```
+.github/
+  skills/          — AI testing skills
+  agents/          — TDD workflow agents
+  prompts/         — Task playbooks
+  instructions/    — Coding standards
+context/
+  normalized/      — Normalized source docs
+  targets/         — Per-target context packs
+tests/
+  api/             — API tests
+  web/             — Web UI tests
+  swing/           — Swing UI tests
+  data/            — Test data contracts
+reports/
+  bundles/         — Evidence bundles
+  runs/            — Run manifests
+pipelines/
+  ado/             — ADO pipeline templates
+schemas/           — Artifact validation schemas
+```
+
+## Setup Commands
+
+```{{SETUP_LANG}}
+# {{SETUP_COMMANDS}}
+```
+
+## Terminal Rules
+
+1. Check before starting — verify services are running before tests
+2. Long-running processes — use separate shells
+3. No secrets in terminals — never echo credentials

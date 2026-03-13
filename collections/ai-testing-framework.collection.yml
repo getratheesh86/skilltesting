@@ -1,0 +1,76 @@
+name: ai-testing-framework
+description: Complete AI Testing Framework skill collection for enterprise test automation across API, Web UI, Swing UI, and Test Data workflows.
+tags:
+  - testing
+  - automation
+  - enterprise
+  - java
+  - playwright
+  - api
+  - governance
+
+items:
+  # Foundation skills
+  - path: skills/context-ingestion
+    kind: skill
+    usage: First step — normalize source docs before any test generation
+
+  - path: skills/orchestration-cli
+    kind: skill
+    usage: Coordinate the full ingest→generate→validate→execute→publish pipeline
+
+  - path: skills/validation-evidence
+    kind: skill
+    usage: Validate artifacts and package governance-ready evidence bundles
+
+  # Generation skills
+  - path: skills/api-test-generation
+    kind: skill
+    usage: Generate API BDD + runnable tests from OpenAPI/Swagger/GraphQL specs
+
+  - path: skills/web-ui-test-generation
+    kind: skill
+    usage: Generate Playwright or Selenium web UI tests
+
+  - path: skills/swing-ui-test-generation
+    kind: skill
+    usage: Generate Swing UI JUnit tests (requires identity strategy)
+
+  # Cross-cutting skills
+  - path: skills/test-data-management
+    kind: skill
+    usage: Define data contracts, provisioning, isolation, and cleanup
+
+  - path: skills/self-healing
+    kind: skill
+    usage: Apply bounded deterministic repair rules to failed test runs
+
+  - path: skills/ado-pipelines-governance
+    kind: skill
+    usage: Create ADO pipeline templates with Quality Passport gates
+
+  - path: skills/owasp-security
+    kind: skill
+    usage: OWASP Top 10 security guidance for code review and test planning
+
+  # Key prompts
+  - path: prompts/create-review-packet.prompt.md
+    kind: prompt
+    usage: Generate human-in-the-loop review packets for PRs
+
+  - path: prompts/create-agents-md.prompt.md
+    kind: prompt
+    usage: Bootstrap an AGENTS.md for a new project
+
+  # Agents
+  - path: agents/tdd-red.agent.md
+    kind: agent
+    usage: TDD Red Phase — write failing tests first
+
+  - path: agents/tdd-green.agent.md
+    kind: agent
+    usage: TDD Green Phase — minimal implementation to pass tests
+
+  - path: agents/tdd-refactor.agent.md
+    kind: agent
+    usage: TDD Refactor Phase — improve quality while tests stay green

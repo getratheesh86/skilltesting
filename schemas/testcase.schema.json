@@ -1,0 +1,70 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Test Case Schema",
+  "description": "Standard schema for reviewable test case artifacts",
+  "type": "object",
+  "required": ["id", "title", "target", "domain", "steps", "expectedResult"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique test case identifier"
+    },
+    "title": {
+      "type": "string",
+      "description": "Human-readable test case title"
+    },
+    "target": {
+      "type": "string",
+      "description": "Target application or API name"
+    },
+    "domain": {
+      "type": "string",
+      "enum": ["api", "web", "swing", "data"],
+      "description": "Testing domain"
+    },
+    "priority": {
+      "type": "string",
+      "enum": ["smoke", "regression", "exploratory"],
+      "description": "Test priority/category"
+    },
+    "tags": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Tags for filtering and reporting"
+    },
+    "preconditions": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Required preconditions"
+    },
+    "steps": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["action"],
+        "properties": {
+          "action": { "type": "string" },
+          "data": { "type": "string" },
+          "expected": { "type": "string" }
+        }
+      },
+      "description": "Test steps"
+    },
+    "expectedResult": {
+      "type": "string",
+      "description": "Expected outcome"
+    },
+    "dataContract": {
+      "type": "string",
+      "description": "Reference to data contract if applicable"
+    },
+    "provenance": {
+      "type": "object",
+      "properties": {
+        "source": { "type": "string" },
+        "generatedAt": { "type": "string", "format": "date-time" },
+        "generatedBy": { "type": "string" }
+      }
+    }
+  }
+}

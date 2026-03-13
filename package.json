@@ -1,0 +1,8 @@
+{
+  "name": "blackrock-skills",
+  "version": "1.0.0",
+  "description": "AI Testing Framework skills, agents, prompts, and instructions for enterprise test automation",
+  "private": true,
+  "keywords": ["agent-skills", "testing", "automation", "copilot", "ai-testing"],
+  "license": "UNLICENSED"
+}
