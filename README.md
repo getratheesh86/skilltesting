@@ -31,7 +31,7 @@ This repo uses a **hybrid approach** based on [Vercel's eval findings](https://v
 |-------|-----------|-------------|
 | `context-ingestion` | Foundation | Normalize source docs into reviewable context packs with provenance |
 | `api-test-generation` | API | Generate BDD + runnable tests from OpenAPI/Swagger/GraphQL specs |
-| `web-ui-test-generation` | Web UI | Generate Playwright tests with resilient locators and traces |
+| `web-ui-test-generation` | Web UI | Generate BDD + runnable Playwright tests with resilient locators and traces |
 | `swing-ui-test-generation` | Swing UI | Generate JUnit 5 Swing tests with identity strategy |
 | `test-data-management` | Test Data | Define data contracts, provisioning, isolation, and cleanup |
 | `orchestration-cli` | Platform | Coordinate ingest-generate-validate-execute-publish stages |
@@ -132,8 +132,8 @@ Do you want centralized updates across many repos?
 
 | Domain | Primary | Also Supported |
 |--------|---------|----------------|
-| API Testing | Java (JUnit 5, RestAssured) | TypeScript, Python |
-| Web UI Testing | Playwright (TypeScript) | Selenium (Java) |
+| API Testing | Playwright (TypeScript) | Java (JUnit 5), Python |
+| Web UI Testing | Playwright (TypeScript) | Playwright (Java) |
 | Swing UI Testing | Java (JUnit 5) | — |
 | Test Data | Language-agnostic contracts | Java, Python, SQL |
 | Pipelines | Azure DevOps YAML | — |

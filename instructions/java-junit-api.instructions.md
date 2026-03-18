@@ -1,9 +1,11 @@
 ---
-description: 'JUnit 5 API test conventions covering AAA pattern, deterministic tests, naming, config isolation, contract drift detection, and diagnostics'
+description: 'JUnit 5 API test conventions covering AAA pattern, deterministic tests, naming, config isolation, contract drift detection, and diagnostics. RestAssured is optional — use when the project already depends on it.'
 applyTo: 'tests/api/**/*.java, **/*Test.java, **/*IT.java'
 ---
 
 # JUnit 5 API Test Conventions
+
+> **Note:** Playwright (TypeScript) is the primary framework for API testing. Use these Java conventions when the project requires Java-based API tests. RestAssured is optional — include it only if the project already depends on it or the team prefers it.
 
 ## Test Structure (AAA Pattern)
 

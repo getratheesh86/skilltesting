@@ -3,7 +3,7 @@ name: api-test-generation
 description: 'Generate BDD and runnable API tests from specs with contract snapshots and drift detection. Use when onboarding APIs or regenerating tests after spec changes.'
 metadata:
   author: ai-testing-framework
-  version: "2026.02.18"
+  version: "2026.02.19"
 ---
 
 # API Test Generation
@@ -12,7 +12,7 @@ metadata:
 - **Trigger:** API onboarding, spec drift, regression expansion
 - **Inputs:** OpenAPI/Swagger/GraphQL spec, auth strategy, env endpoints
 - **Outputs:** tests/api/bdd/, tests/api/, tests/api/contracts/
-- **Language:** Java (JUnit 5) primary; TypeScript, Python supported
+- **Language:** Playwright (TypeScript) primary; Java (JUnit 5), Python supported
 - **Pipeline stage:** Generate
 - **Prerequisite:** Context pack for target
 
@@ -43,11 +43,31 @@ Converts API specifications into BDD feature files and runnable tests, and produ
 5) Record provenance for sources used.
 
 ## Language support
-- **Java** (JUnit 5 + RestAssured) — primary
-- TypeScript (Jest/Vitest) — supported
-- Python (pytest + requests) — supported
+- **Playwright (TypeScript)** — primary, using `APIRequestContext` for API testing
+- **Java** (JUnit 5) — supported; optionally with RestAssured for Java-centric teams
+- **Python** (pytest + requests) — supported
 
-The orchestrator selects language based on project configuration.
+Using Playwright for both API and web UI testing provides a consistent framework, shared config, and unified reporting. The orchestrator selects language based on project configuration.
+
+## Playwright API testing pattern
+
+Playwright's `APIRequestContext` enables API testing without a browser, using the same framework as web UI tests:
+
+```typescript
+import { test, expect } from '@playwright/test';
+
+test.describe('Orders API', () => {
+  test('POST /orders should return 201 for valid payload', async ({ request }) => {
+    const response = await request.post('/api/v1/orders', {
+      data: { customerId: 'cust-001', items: [{ sku: 'SKU-100', qty: 2 }] }
+    });
+    expect(response.ok()).toBeTruthy();
+    expect(response.status()).toBe(201);
+    const body = await response.json();
+    expect(body.orderId).toBeTruthy();
+  });
+});
+```
 
 ## Validation
 - BDD metadata validation

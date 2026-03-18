@@ -30,7 +30,7 @@ items:
 
   - path: skills/web-ui-test-generation
     kind: skill
-    usage: Generate Playwright or Selenium web UI tests
+    usage: Generate BDD + runnable Playwright web UI tests (TypeScript or Java)
 
   - path: skills/swing-ui-test-generation
     kind: skill

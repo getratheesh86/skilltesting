@@ -13,7 +13,7 @@ Vercel's eval research shows AGENTS.md with a compressed knowledge index achieve
 
 1) **Analyze the target project:**
    - Detect language/framework from build files (pom.xml, build.gradle, package.json, requirements.txt)
-   - Detect test framework from dependencies (JUnit, Playwright, pytest, Selenium)
+   - Detect test framework from dependencies (JUnit, Playwright, pytest)
    - Detect CI/CD from pipeline files (ADO YAML, GitHub Actions)
    - List installed skills in `.github/skills/`
    - List installed prompts in `.github/prompts/`

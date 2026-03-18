@@ -41,7 +41,7 @@ orchestrate --target <name> --type api|web|swing --language java|typescript|pyth
   → ingest (language-agnostic)
   → generate (dispatches to api/web/swing skill + language-specific prompt)
   → validate (schema + compile/lint for target language)
-  → execute (runner per framework: JUnit/Playwright/Selenium)
+  → execute (runner per framework: JUnit/Playwright)
   → publish (standard evidence bundle)
 ```
 

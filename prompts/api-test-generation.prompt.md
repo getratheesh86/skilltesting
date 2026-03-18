@@ -12,12 +12,15 @@ You are generating API tests from a specification for a specific target.
 - Spec locations (OpenAPI, Swagger, GraphQL, or other)
 - Auth strategy (API key, OAuth, bearer token, etc.)
 - Test data approach (seeded, mocked, contract-based)
+- Language preference (TypeScript with Playwright or Java with JUnit 5; defaults to Playwright TypeScript)
 
 ## Steps
 
 1. Ingest the specification and normalize into a context pack (invoke context-ingestion if needed).
 2. Generate BDD feature files tagged to endpoints under `tests/api/bdd/`.
 3. Generate runnable test files under `tests/api/`.
+   - **Playwright TypeScript (default):** Use `APIRequestContext` from `@playwright/test`.
+   - **Java:** Use JUnit 5, optionally with RestAssured.
 4. Emit a contract snapshot and drift report for each endpoint.
 5. Record provenance for all generated artifacts.
 
