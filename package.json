@@ -4,5 +4,14 @@
   "description": "AI Testing Framework skills, agents, prompts, and instructions for enterprise test automation",
   "private": true,
   "keywords": ["agent-skills", "testing", "automation", "copilot", "ai-testing"],
-  "license": "UNLICENSED"
+  "license": "UNLICENSED",
+  "scripts": {
+    "test:web": "playwright test",
+    "test:web:headed": "playwright test --headed",
+    "test:web:smoke": "playwright test --grep @smoke",
+    "test:web:report": "playwright show-report reports/web/html"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.43.0"
+  }
 }
