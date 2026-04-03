@@ -1,0 +1,588 @@
+<mxfile host="app.diagrams.net" agent="GitHub Copilot" version="24.7.0">
+  <diagram name="Sprint 0 to Sprint 1 Flow" id="blackrock-sprint0-sprint1-flow">
+    <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3200" pageHeight="2200" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+        <!-- Title -->
+        <mxCell id="title" value="BlackRock – AI Automation Test Case Flow (Sprint 0 → Sprint 1) | UI + API + Swing" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=22;fontStyle=1;fontColor=#0B1F3B;fontFamily=Segoe UI;" vertex="1" parent="1">
+          <mxGeometry x="40" y="15" width="1100" height="35" as="geometry" />
+        </mxCell>
+        
+        <!-- Sprint 0 Header Band -->
+        <mxCell id="sprint0_band" value="SPRINT 0 — Readiness / Context Engineering" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#1E3A5F;strokeColor=#0B1F3B;fontColor=#FFFFFF;fontFamily=Segoe UI;fontSize=14;fontStyle=1;align=center;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="40" y="55" width="2100" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- Swimlane: BlackRock App/QA Team -->
+        <mxCell id="lane1" value="BlackRock App/QA Team" style="swimlane;horizontal=0;whiteSpace=wrap;html=1;startSize=30;fillColor=#0B1F3B;fontColor=#FFFFFF;strokeColor=#374151;fontSize=13;fontStyle=1;fontFamily=Segoe UI;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="85" width="2100" height="220" as="geometry" />
+        </mxCell>
+        
+        <!-- A1: Provide Inputs (Sprint 0) -->
+        <mxCell id="A1" value="&lt;b&gt;Provide Inputs (Sprint 0)&lt;/b&gt;&lt;hr style=&quot;margin:3px 0&quot;&gt;&lt;ul style=&quot;margin:2px 0 0 8px;padding:0;text-align:left;font-size:8px&quot;&gt;&lt;li&gt;User guide + UI/API walkthrough notes&lt;/li&gt;&lt;li&gt;Swagger/OpenAPI contracts&lt;/li&gt;&lt;li&gt;DB setup guide + sample DB commands&lt;/li&gt;&lt;li&gt;Log analytics guidance (log access)&lt;/li&gt;&lt;li&gt;Repo access (app + test assets)&lt;/li&gt;&lt;li&gt;ADO board access (area path, story status)&lt;/li&gt;&lt;/ul&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F3F4F6;strokeColor=#374151;fontColor=#0B1F3B;fontFamily=Segoe UI;fontSize=10;align=center;verticalAlign=top;spacingTop=4;" vertex="1" parent="lane1">
+          <mxGeometry x="50" y="40" width="200" height="140" as="geometry" />
+        </mxCell>
+        
+        <!-- A1_out: Inputs Pack -->
+        <mxCell id="A1_out" value="&lt;b&gt;Inputs Pack&lt;/b&gt;&lt;br&gt;(Docs + Specs + Repo/ADO Access)" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;fillColor=#E6F0FF;strokeColor=#374151;fontColor=#0B1F3B;fontFamily=Segoe UI;fontSize=9;" vertex="1" parent="lane1">
+          <mxGeometry x="280" y="70" width="120" height="65" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="edge_A1_A1out" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#374151;strokeWidth=2;endArrow=classic;" edge="1" parent="lane1" source="A1" target="A1_out">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <!-- B2_cov_def: Define Coverage Benchmark -->
+        <mxCell id="B2_cov_def" value="&lt;b&gt;Define Coverage Benchmark&lt;/b&gt;&lt;br&gt;&amp;amp; Acceptance Criteria" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF2CC;strokeColor=#D6B656;fontColor=#0B1F3B;fontFamily=Segoe UI;fontSize=9;align=center;" vertex="1" parent="lane1">
+          <mxGeometry x="580" y="50" width="140" height="50" as="geometry" />
+        </mxCell>
+        
+        <!-- B3: Human-in-the-loop Validation -->
+        <mxCell id="B3" value="&lt;b&gt;Human-in-the-loop Validation&lt;/b&gt;&lt;hr style=&quot;margin:3px 0&quot;&gt;&lt;ul style=&quot;margin:2px 0 0 8px;padding:0;text-align:left;font-size:8px&quot;&gt;&lt;li&gt;QA validates BDD feature scenarios&lt;/li&gt;&lt;li&gt;Approves scenario completeness&lt;/li&gt;&lt;/ul&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F3F4F6;strokeColor=#374151;fontColor=#0B1F3B;fontFamily=Segoe UI;fontSize=10;align=center;verticalAlign=top;spacingTop=4;" vertex="1" parent="lane1">
+          <mxGeometry x="810" y="50" width="160" height="75" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="B3_gate" value="&lt;b&gt;GATE 3&lt;/b&gt;&lt;br&gt;Scenario&lt;br&gt;Approval?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFF4D6;strokeColor=#D6B656;fontColor=#0B1F3B;fontFamily=Segoe UI;fontSize=9;fontStyle=0;" vertex="1" parent="lane1">
+          <mxGeometry x="1000" y="45" width="90" height="80" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="edge_B3_B3gate" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#374151;strokeWidth=2;endArrow=classic;" edge="1" parent="lane1" source="B3" target="B3_gate">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <!-- Swimlane: Microsoft Delivery Team -->
+        <mxCell id="lane2" value="Microsoft Delivery Team" style="swimlane;horizontal=0;whiteSpace=wrap;html=1;startSize=30;fillColor=#0B1F3B;fontColor=#FFFFFF;strokeColor=#374151;fontSize=13;fontStyle=1;fontFamily=Segoe UI;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="305" width="2100" height="600" as="geometry" />
+        </mxCell>
+        
+        <!-- A2: Collect & Store Context -->
+        <mxCell id="A2" value="&lt;b&gt;Collect &amp;amp; Store Context in Repo&lt;/b&gt;&lt;br&gt;&lt;i&gt;(Security Boundary)&lt;/i&gt;&lt;hr style=&quot;margin:3px 0&quot;&gt;&lt;ul style=&quot;margin:2px 0 0 8px;padding:0;text-align:left;font-size:8px&quot;&gt;&lt;li&gt;Download Swagger, docs, payloads to /knowledge-base&lt;/li&gt;&lt;li&gt;Keep AI-driving artifacts inside repo&lt;/li&gt;&lt;li&gt;Create/maintain skill.md prompts&lt;/li&gt;&lt;/ul&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F3F4F6;strokeColor=#374151;fontColor=#0B1F3B;fontFamily=Segoe UI;fontSize=10;align=center;verticalAlign=top;spacingTop=4;" vertex="1" parent="lane2">
+          <mxGeometry x="50" y="30" width="190" height="110" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="A2_out" value="&lt;b&gt;Repo Knowledge Base&lt;/b&gt;&lt;br&gt;+ skill.md updated" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;fillColor=#E6F0FF;strokeColor=#374151;fontColor=#0B1F3B;fontFamily=Segoe UI;fontSize=9;" vertex="1" parent="lane2">
+          <mxGeometry x="270" y="50" width="120" height="55" as="geometry" />
+        </mxCell>
+        
+        <!-- A3: Delivery Gate Checklist -->
+        <mxCell id="A3" value="&lt;b&gt;Delivery Gate Checklist&lt;/b&gt;&lt;br&gt;&lt;i&gt;(Sprint 0)&lt;/i&gt;&lt;hr style=&quot;margin:3px 0&quot;&gt;&lt;ul style=&quot;margin:2px 0 0 8px;padding:0;text-align:left;font-size:8px&quot;&gt;&lt;li&gt;Fill delivery gate (md→excel) for UI/API/Swing&lt;/li&gt;&lt;li&gt;Track URLs, access, missing items&lt;/li&gt;&lt;li&gt;Sprint 1 readiness review (demo/KTE)&lt;/li&gt;&lt;/ul&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F3F4F6;strokeColor=#374151;fontColor=#0B1F3B;fontFamily=Segoe UI;fontSize=10;align=center;verticalAlign=top;spacingTop=4;" vertex="1" parent="lane2">
+          <mxGeometry x="420" y="30" width="180" height="105" as="geometry" />
+        </mxCell>
+        
+        <!-- A3_gate: Gate 1 -->
+        <mxCell id="A3_gate" value="&lt;b&gt;GATE 1&lt;/b&gt;&lt;br&gt;Inputs &amp;amp;&lt;br&gt;Access OK?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFF4D6;strokeColor=#D6B656;fontColor=#0B1F3B;fontFamily=Segoe UI;fontSize=9;fontStyle=0;" vertex="1" parent="lane2">
+          <mxGeometry x="630" y="35" width="100" height="90" as="geometry" />
+        </mxCell>
+        
+        <!-- Edges for Sprint 0 in Microsoft lane -->
+        <mxCell id="edge_A2_A2out" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#374151;strokeWidth=2;endArrow=classic;" edge="1" parent="lane2" source="A2" target="A2_out">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="edge_A2out_A3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#374151;strokeWidth=2;endArrow=classic;" edge="1" parent="lane2" source="A2_out" target="A3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="edge_A3_A3gate" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#374151;strokeWidth=2;endArrow=classic;" edge="1" parent="lane2" source="A3" target="A3_gate">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <!-- Sprint 1 Section Header -->
+        <mxCell id="sprint1_sep" value="─────────────────────────  SPRINT 1 — Automation Test Flow  ─────────────────────────" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=3;fontColor=#1E3A5F;fontFamily=Segoe UI;" vertex="1" parent="lane2">
+          <mxGeometry x="40" y="155" width="800" height="20" as="geometry" />
+        </mxCell>
+        
+        <!-- B1: Identify QA-Ready Stories -->
+        <mxCell id="B1" value="&lt;b&gt;Identify QA-Ready Stories&lt;/b&gt;&lt;br&gt;&lt;i&gt;from ADO&lt;/i&gt;&lt;hr style=&quot;margin:3px 0&quot;&gt;&lt;ul style=&quot;margin:2px 0 0 8px;padding:0;text-align:left;font-size:8px&quot;&gt;&lt;li&gt;Read ADO board; filter QA-ready stories&lt;/li&gt;&lt;li&gt;Select endpoints/features for backlog&lt;/li&gt;&lt;/ul&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F3F4F6;strokeColor=#374151;fontColor=#0B1F3B;fontFamily=Segoe UI;fontSize=10;align=center;verticalAlign=top;spacingTop=4;" vertex="1" parent="lane2">
+          <mxGeometry x="50" y="185" width="165" height="85" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="B1_out" value="&lt;b&gt;Sprint Test Scope&lt;/b&gt;&lt;br&gt;(Story list + endpoints)" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;fillColor=#E6F0FF;strokeColor=#374151;fontColor=#0B1F3B;fontFamily=Segoe UI;fontSize=9;" vertex="1" parent="lane2">
+          <mxGeometry x="240" y="195" width="110" height="55" as="geometry" />
+        </mxCell>
+        
+        <!-- B2: Scenario Discovery -->
+        <mxCell id="B2" value="&lt;b&gt;Scenario Discovery&lt;/b&gt;&lt;br&gt;&lt;i&gt;(BDD Feature Files + Docs)&lt;/i&gt;&lt;hr style=&quot;margin:3px 0&quot;&gt;&lt;ul style=&quot;margin:2px 0 0 8px;padding:0;text-align:left;font-size:8px&quot;&gt;&lt;li&gt;Parse BDD feature files from repo&lt;/li&gt;&lt;li&gt;Map to Swagger + requirements&lt;/li&gt;&lt;li&gt;Identify coverage gaps&lt;/li&gt;&lt;/ul&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F3F4F6;strokeColor=#374151;fontColor=#0B1F3B;fontFamily=Segoe UI;fontSize=10;align=center;verticalAlign=top;spacingTop=4;" vertex="1" parent="lane2">
+          <mxGeometry x="375" y="180" width="170" height="95" as="geometry" />
+        </mxCell>
+        
+        <!-- B2_gate: Coverage Criteria -->
+        <mxCell id="B2_gate" value="&lt;b&gt;GATE 2&lt;/b&gt;&lt;br&gt;Coverage&lt;br&gt;Defined?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFF4D6;strokeColor=#D6B656;fontColor=#0B1F3B;fontFamily=Segoe UI;fontSize=9;fontStyle=0;" vertex="1" parent="lane2">
+          <mxGeometry x="570" y="185" width="90" height="80" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="B2_out" value="&lt;b&gt;Scenario Matrix&lt;/b&gt;&lt;br&gt;(Coverage Map)" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;fillColor=#E6F0FF;strokeColor=#374151;fontColor=#0B1F3B;fontFamily=Segoe UI;fontSize=9;" vertex="1" parent="lane2">
+          <mxGeometry x="685" y="195" width="100" height="55" as="geometry" />
+        </mxCell>
+        
+        <!-- B4: Test Data Strategy -->
+        <mxCell id="B4" value="&lt;b&gt;Test Data Strategy&lt;/b&gt;&lt;br&gt;&lt;i&gt;(Synthetic Data)&lt;/i&gt;&lt;hr style=&quot;margin:3px 0&quot;&gt;&lt;ul style=&quot;margin:2px 0 0 8px;padding:0;text-align:left;font-size:8px&quot;&gt;&lt;li&gt;Option A: Request/response logs&lt;/li&gt;&lt;li&gt;Option B: DB access for synthetic data&lt;/li&gt;&lt;li&gt;Decide based on access + feasibility&lt;/li&gt;&lt;/ul&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F3F4F6;strokeColor=#374151;fontColor=#0B1F3B;fontFamily=Segoe UI;fontSize=10;align=center;verticalAlign=top;spacingTop=4;" vertex="1" parent="lane2">
+          <mxGeometry x="50" y="295" width="165" height="95" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="B4_dec" value="Data&lt;br&gt;Source?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFF4D6;strokeColor=#D6B656;fontColor=#0B1F3B;fontFamily=Segoe UI;fontSize=9;fontStyle=1;" vertex="1" parent="lane2">
+          <mxGeometry x="240" y="305" width="70" height="60" as="geometry" />
+        </mxCell>
+        
+        <!-- Data source cylinders -->
+        <mxCell id="ds_logs" value="Log Files" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=8;fillColor=#DAE8FC;strokeColor=#6C8EBF;fontColor=#0B1F3B;fontFamily=Segoe UI;fontSize=8;" vertex="1" parent="lane2">
+          <mxGeometry x="235" y="385" width="50" height="45" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="ds_db" value="Database" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=8;fillColor=#DAE8FC;strokeColor=#6C8EBF;fontColor=#0B1F3B;fontFamily=Segoe UI;fontSize=8;" vertex="1" parent="lane2">
+          <mxGeometry x="300" y="385" width="50" height="45" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="B4_out" value="&lt;b&gt;Test Data Pack&lt;/b&gt;&lt;br&gt;(payloads + headers + env)" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;fillColor=#E6F0FF;strokeColor=#374151;fontColor=#0B1F3B;fontFamily=Segoe UI;fontSize=9;" vertex="1" parent="lane2">
+          <mxGeometry x="370" y="310" width="110" height="55" as="geometry" />
+        </mxCell>
+        
+        <!-- B5: Auth Strategy -->
+        <mxCell id="B5" value="&lt;b&gt;Auth Strategy (Non-Prod)&lt;/b&gt;&lt;hr style=&quot;margin:3px 0&quot;&gt;&lt;ul style=&quot;margin:2px 0 0 8px;padding:0;text-align:left;font-size:8px&quot;&gt;&lt;li&gt;Basic token auth (non-prod scope)&lt;/li&gt;&lt;li&gt;OAuth+MFA in prod: out-of-scope&lt;/li&gt;&lt;/ul&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F3F4F6;strokeColor=#374151;fontColor=#0B1F3B;fontFamily=Segoe UI;fontSize=10;align=center;verticalAlign=top;spacingTop=4;" vertex="1" parent="lane2">
+          <mxGeometry x="500" y="300" width="150" height="70" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="B5_out" value="&lt;b&gt;Auth Token Provider&lt;/b&gt;&lt;br&gt;component" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;fillColor=#E6F0FF;strokeColor=#374151;fontColor=#0B1F3B;fontFamily=Segoe UI;fontSize=9;" vertex="1" parent="lane2">
+          <mxGeometry x="670" y="305" width="100" height="50" as="geometry" />
+        </mxCell>
+        
+        <!-- B6: Framework Choice -->
+        <mxCell id="B6" value="&lt;b&gt;Framework Choice (UI/API)&lt;/b&gt;&lt;hr style=&quot;margin:3px 0&quot;&gt;&lt;ul style=&quot;margin:2px 0 0 8px;padding:0;text-align:left;font-size:8px&quot;&gt;&lt;li&gt;UI: Playwright + TypeScript (preferred)&lt;/li&gt;&lt;li&gt;API: Playwright TS OR RestAssured (Java)&lt;/li&gt;&lt;/ul&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F3F4F6;strokeColor=#374151;fontColor=#0B1F3B;fontFamily=Segoe UI;fontSize=10;align=center;verticalAlign=top;spacingTop=4;" vertex="1" parent="lane2">
+          <mxGeometry x="790" y="295" width="165" height="75" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="B6_dec" value="API&lt;br&gt;Framework?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFF4D6;strokeColor=#D6B656;fontColor=#0B1F3B;fontFamily=Segoe UI;fontSize=9;fontStyle=1;" vertex="1" parent="lane2">
+          <mxGeometry x="975" y="300" width="80" height="65" as="geometry" />
+        </mxCell>
+        
+        <!-- Framework choice labels -->
+        <mxCell id="fw_playwright" value="Playwright (TS)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D5E8D4;strokeColor=#82B366;fontColor=#0B1F3B;fontFamily=Segoe UI;fontSize=8;" vertex="1" parent="lane2">
+          <mxGeometry x="970" y="385" width="90" height="25" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="fw_restassured" value="RestAssured (Java)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D5E8D4;strokeColor=#82B366;fontColor=#0B1F3B;fontFamily=Segoe UI;fontSize=8;" vertex="1" parent="lane2">
+          <mxGeometry x="970" y="420" width="90" height="25" as="geometry" />
+        </mxCell>
+        
+        <!-- B7: Implement Reusable Components -->
+        <mxCell id="B7" value="&lt;b&gt;Implement Reusable Components&lt;/b&gt;&lt;hr style=&quot;margin:3px 0&quot;&gt;&lt;ul style=&quot;margin:2px 0 0 8px;padding:0;text-align:left;font-size:8px&quot;&gt;&lt;li&gt;Request builder + env config&lt;/li&gt;&lt;li&gt;Response/schema validators&lt;/li&gt;&lt;li&gt;Logging + reporting hooks&lt;/li&gt;&lt;li&gt;Maintain skill repo prompts + versioning&lt;/li&gt;&lt;/ul&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F3F4F6;strokeColor=#374151;fontColor=#0B1F3B;fontFamily=Segoe UI;fontSize=10;align=center;verticalAlign=top;spacingTop=4;" vertex="1" parent="lane2">
+          <mxGeometry x="1085" y="290" width="180" height="100" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="B7_out" value="&lt;b&gt;Reusable Framework&lt;/b&gt;&lt;br&gt;+ Skills Repo Updates" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;fillColor=#E6F0FF;strokeColor=#374151;fontColor=#0B1F3B;fontFamily=Segoe UI;fontSize=9;" vertex="1" parent="lane2">
+          <mxGeometry x="1285" y="310" width="110" height="55" as="geometry" />
+        </mxCell>
+        
+        <!-- C1: Execute Tests -->
+        <mxCell id="C1" value="&lt;b&gt;Execute Tests&lt;/b&gt;&lt;br&gt;&lt;i&gt;(Local + CI/CD)&lt;/i&gt;&lt;hr style=&quot;margin:3px 0&quot;&gt;&lt;ul style=&quot;margin:2px 0 0 8px;padding:0;text-align:left;font-size:8px&quot;&gt;&lt;li&gt;Local smoke then regression&lt;/li&gt;&lt;li&gt;CI: ADO pipeline execution&lt;/li&gt;&lt;li&gt;Generate evidence pack&lt;/li&gt;&lt;/ul&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F3F4F6;strokeColor=#374151;fontColor=#0B1F3B;fontFamily=Segoe UI;fontSize=10;align=center;verticalAlign=top;spacingTop=4;" vertex="1" parent="lane2">
+          <mxGeometry x="1415" y="295" width="145" height="85" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="C1_dec" value="Run&lt;br&gt;Mode?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFF4D6;strokeColor=#D6B656;fontColor=#0B1F3B;fontFamily=Segoe UI;fontSize=9;fontStyle=1;" vertex="1" parent="lane2">
+          <mxGeometry x="1580" y="305" width="70" height="60" as="geometry" />
+        </mxCell>
+        
+        <!-- C2_local: Local Execution container -->
+        <mxCell id="C2_local" value="&lt;b&gt;Local Execution&lt;/b&gt;" style="swimlane;whiteSpace=wrap;html=1;startSize=22;fillColor=#F3F4F6;strokeColor=#374151;fontColor=#0B1F3B;fontFamily=Segoe UI;fontSize=10;rounded=1;collapsible=0;" vertex="1" parent="lane2">
+          <mxGeometry x="1530" y="400" width="160" height="180" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="C2_1" value="Set Base URL + auth config" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#374151;fontColor=#0B1F3B;fontFamily=Segoe UI;fontSize=8;" vertex="1" parent="C2_local">
+          <mxGeometry x="10" y="28" width="140" height="25" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="C2_2" value="Run Smoke suite" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#374151;fontColor=#0B1F3B;fontFamily=Segoe UI;fontSize=8;" vertex="1" parent="C2_local">
+          <mxGeometry x="10" y="58" width="140" height="25" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="C2_3" value="Run Regression suite" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#374151;fontColor=#0B1F3B;fontFamily=Segoe UI;fontSize=8;" vertex="1" parent="C2_local">
+          <mxGeometry x="10" y="88" width="140" height="25" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="C2_4" value="Generate report + artifacts" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#374151;fontColor=#0B1F3B;fontFamily=Segoe UI;fontSize=8;" vertex="1" parent="C2_local">
+          <mxGeometry x="10" y="118" width="140" height="25" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="C2_out" value="&lt;b&gt;Local Output&lt;/b&gt;&lt;br&gt;Quick Feedback" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;fillColor=#E6F0FF;strokeColor=#374151;fontColor=#0B1F3B;fontFamily=Segoe UI;fontSize=8;" vertex="1" parent="C2_local">
+          <mxGeometry x="30" y="148" width="100" height="28" as="geometry" />
+        </mxCell>
+        
+        <!-- C4: Evidence Pack & Results Review -->
+        <mxCell id="C4" value="&lt;b&gt;Evidence Pack &amp;amp; Results Review&lt;/b&gt;&lt;hr style=&quot;margin:3px 0&quot;&gt;&lt;ul style=&quot;margin:2px 0 0 8px;padding:0;text-align:left;font-size:8px&quot;&gt;&lt;li&gt;Store Playwright artifacts/screenshots/logs&lt;/li&gt;&lt;li&gt;Publish reports for Sprint evidence&lt;/li&gt;&lt;/ul&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F3F4F6;strokeColor=#374151;fontColor=#0B1F3B;fontFamily=Segoe UI;fontSize=10;align=center;verticalAlign=top;spacingTop=4;" vertex="1" parent="lane2">
+          <mxGeometry x="1740" y="305" width="165" height="75" as="geometry" />
+        </mxCell>
+        
+        <!-- C4_gate: Pass? -->
+        <mxCell id="C4_gate" value="&lt;b&gt;GATE 4&lt;/b&gt;&lt;br&gt;Pass?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFF4D6;strokeColor=#D6B656;fontColor=#0B1F3B;fontFamily=Segoe UI;fontSize=9;fontStyle=0;" vertex="1" parent="lane2">
+          <mxGeometry x="1930" y="305" width="80" height="70" as="geometry" />
+        </mxCell>
+        
+        <!-- C5_out: Evidence Pack Published -->
+        <mxCell id="C5_out" value="&lt;b&gt;Evidence Pack Published&lt;/b&gt;&lt;br&gt;✓ Sprint Success" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;fillColor=#D5E8D4;strokeColor=#82B366;fontColor=#0B1F3B;fontFamily=Segoe UI;fontSize=10;" vertex="1" parent="lane2">
+          <mxGeometry x="1915" y="215" width="120" height="60" as="geometry" />
+        </mxCell>
+        
+        <!-- C6: Defects + Fixes -->
+        <mxCell id="C6" value="&lt;b&gt;Defects + Fixes + Rerun&lt;/b&gt;&lt;hr style=&quot;margin:3px 0&quot;&gt;&lt;ul style=&quot;margin:2px 0 0 8px;padding:0;text-align:left;font-size:8px&quot;&gt;&lt;li&gt;Create defect with logs/request/response&lt;/li&gt;&lt;li&gt;Fix test (assertions/data) or product bug&lt;/li&gt;&lt;li&gt;Update skills repo prompts/components&lt;/li&gt;&lt;/ul&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8CECC;strokeColor=#B85450;fontColor=#0B1F3B;fontFamily=Segoe UI;fontSize=10;align=center;verticalAlign=top;spacingTop=4;" vertex="1" parent="lane2">
+          <mxGeometry x="1740" y="420" width="175" height="85" as="geometry" />
+        </mxCell>
+        
+        <!-- Edges for Sprint 1 flow -->
+        <mxCell id="edge_B1_B1out" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#374151;strokeWidth=2;endArrow=classic;" edge="1" parent="lane2" source="B1" target="B1_out">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="edge_B1out_B2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#374151;strokeWidth=2;endArrow=classic;" edge="1" parent="lane2" source="B1_out" target="B2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="edge_B2_B2gate" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#374151;strokeWidth=2;endArrow=classic;" edge="1" parent="lane2" source="B2" target="B2_gate">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="edge_B2gate_B2out" value="Yes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#82B366;strokeWidth=2;endArrow=classic;fontFamily=Segoe UI;fontSize=9;" edge="1" parent="lane2" source="B2_gate" target="B2_out">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="edge_B4_B4dec" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#374151;strokeWidth=2;endArrow=classic;" edge="1" parent="lane2" source="B4" target="B4_dec">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="edge_B4dec_logs" value="Logs" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#6C8EBF;strokeWidth=1;endArrow=classic;fontFamily=Segoe UI;fontSize=8;exitX=0.5;exitY=1;" edge="1" parent="lane2" source="B4_dec" target="ds_logs">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="edge_B4dec_db" value="DB" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#6C8EBF;strokeWidth=1;endArrow=classic;fontFamily=Segoe UI;fontSize=8;exitX=1;exitY=0.5;" edge="1" parent="lane2" source="B4_dec" target="ds_db">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="325" y="335" />
+              <mxPoint x="325" y="380" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="edge_B4dec_B4out" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#374151;strokeWidth=2;endArrow=classic;exitX=1;exitY=0.5;" edge="1" parent="lane2" source="B4_dec" target="B4_out">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="edge_B4out_B5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#374151;strokeWidth=2;endArrow=classic;" edge="1" parent="lane2" source="B4_out" target="B5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="edge_B5_B5out" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#374151;strokeWidth=2;endArrow=classic;" edge="1" parent="lane2" source="B5" target="B5_out">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="edge_B5out_B6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#374151;strokeWidth=2;endArrow=classic;" edge="1" parent="lane2" source="B5_out" target="B6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="edge_B6_B6dec" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#374151;strokeWidth=2;endArrow=classic;" edge="1" parent="lane2" source="B6" target="B6_dec">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="edge_B6dec_pw" value="TS" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#82B366;strokeWidth=1;endArrow=classic;fontFamily=Segoe UI;fontSize=8;exitX=0.5;exitY=1;" edge="1" parent="lane2" source="B6_dec" target="fw_playwright">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="edge_B6dec_ra" value="Java" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#82B366;strokeWidth=1;endArrow=classic;fontFamily=Segoe UI;fontSize=8;exitX=0.5;exitY=1;" edge="1" parent="lane2" source="B6_dec" target="fw_restassured">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1015" y="375" />
+              <mxPoint x="1015" y="433" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="edge_B6dec_B7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#374151;strokeWidth=2;endArrow=classic;exitX=1;exitY=0.5;" edge="1" parent="lane2" source="B6_dec" target="B7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="edge_B7_B7out" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#374151;strokeWidth=2;endArrow=classic;" edge="1" parent="lane2" source="B7" target="B7_out">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="edge_B7out_C1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#374151;strokeWidth=2;endArrow=classic;" edge="1" parent="lane2" source="B7_out" target="C1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="edge_C1_C1dec" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#374151;strokeWidth=2;endArrow=classic;" edge="1" parent="lane2" source="C1" target="C1_dec">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="edge_C1dec_local" value="Local" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#374151;strokeWidth=2;endArrow=classic;fontFamily=Segoe UI;fontSize=9;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="lane2" source="C1_dec" target="C2_local">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="edge_C2local_C4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#374151;strokeWidth=2;endArrow=classic;exitX=1;exitY=0.5;" edge="1" parent="lane2" source="C2_local" target="C4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1720" y="490" />
+              <mxPoint x="1720" y="343" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="edge_C4_C4gate" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#374151;strokeWidth=2;endArrow=classic;" edge="1" parent="lane2" source="C4" target="C4_gate">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="edge_C4gate_C5" value="Yes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#82B366;strokeWidth=2;endArrow=classic;fontFamily=Segoe UI;fontSize=9;exitX=0.5;exitY=0;" edge="1" parent="lane2" source="C4_gate" target="C5_out">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="edge_C4gate_C6" value="No" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#B85450;strokeWidth=2;endArrow=classic;fontFamily=Segoe UI;fontSize=9;exitX=0.5;exitY=1;" edge="1" parent="lane2" source="C4_gate" target="C6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <!-- Feedback loop from C6 back to B2 and B7 -->
+        <mxCell id="edge_C6_B2" value="Refine scenarios" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#B85450;strokeWidth=2;endArrow=classic;dashed=1;dashPattern=8 8;fontFamily=Segoe UI;fontSize=8;fontColor=#B85450;exitX=0;exitY=0.5;entryX=0.5;entryY=1;" edge="1" parent="lane2" source="C6" target="B2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="460" y="463" />
+              <mxPoint x="460" y="290" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="edge_C6_B7" value="Update skills/framework" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#B85450;strokeWidth=2;endArrow=classic;dashed=1;dashPattern=8 8;fontFamily=Segoe UI;fontSize=8;fontColor=#B85450;exitX=0;exitY=0.8;entryX=0.5;entryY=1;" edge="1" parent="lane2" source="C6" target="B7">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1740" y="488" />
+              <mxPoint x="1175" y="488" />
+              <mxPoint x="1175" y="405" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Swimlane: DevOps / ADO Pipeline -->
+        <mxCell id="lane3" value="DevOps / ADO Pipeline" style="swimlane;horizontal=0;whiteSpace=wrap;html=1;startSize=30;fillColor=#0B1F3B;fontColor=#FFFFFF;strokeColor=#374151;fontSize=13;fontStyle=1;fontFamily=Segoe UI;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="905" width="2100" height="220" as="geometry" />
+        </mxCell>
+        
+        <!-- C3_cicd: Azure DevOps Pipeline -->
+        <mxCell id="C3_cicd" value="&lt;b&gt;Azure DevOps Pipeline&lt;/b&gt;" style="swimlane;whiteSpace=wrap;html=1;startSize=22;fillColor=#F3F4F6;strokeColor=#374151;fontColor=#0B1F3B;fontFamily=Segoe UI;fontSize=10;rounded=1;collapsible=0;" vertex="1" parent="lane3">
+          <mxGeometry x="1530" y="20" width="170" height="185" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="C3_1" value="Restore + build" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#374151;fontColor=#0B1F3B;fontFamily=Segoe UI;fontSize=8;" vertex="1" parent="C3_cicd">
+          <mxGeometry x="10" y="27" width="150" height="22" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="C3_2" value="Run unit tests" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#374151;fontColor=#0B1F3B;fontFamily=Segoe UI;fontSize=8;" vertex="1" parent="C3_cicd">
+          <mxGeometry x="10" y="54" width="150" height="22" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="C3_3" value="Run API/UI smoke tests" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#374151;fontColor=#0B1F3B;fontFamily=Segoe UI;fontSize=8;" vertex="1" parent="C3_cicd">
+          <mxGeometry x="10" y="81" width="150" height="22" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="C3_4" value="Publish test results" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#374151;fontColor=#0B1F3B;fontFamily=Segoe UI;fontSize=8;" vertex="1" parent="C3_cicd">
+          <mxGeometry x="10" y="108" width="150" height="22" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="C3_5" value="Publish coverage/report" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#374151;fontColor=#0B1F3B;fontFamily=Segoe UI;fontSize=8;" vertex="1" parent="C3_cicd">
+          <mxGeometry x="10" y="135" width="150" height="22" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="C3_6" value="Notify Teams/Email (optional)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#374151;fontColor=#0B1F3B;fontFamily=Segoe UI;fontSize=8;" vertex="1" parent="C3_cicd">
+          <mxGeometry x="10" y="160" width="150" height="22" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="C3_out" value="&lt;b&gt;Pipeline Output&lt;/b&gt;&lt;br&gt;Quality Gate + Reports" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;fillColor=#E6F0FF;strokeColor=#374151;fontColor=#0B1F3B;fontFamily=Segoe UI;fontSize=9;" vertex="1" parent="lane3">
+          <mxGeometry x="1740" y="80" width="120" height="55" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="edge_C3_C3out" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#374151;strokeWidth=2;endArrow=classic;" edge="1" parent="lane3" source="C3_cicd" target="C3_out">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        
+        <!-- Cross-lane edges -->
+        <!-- A1_out to A2 -->
+        <mxCell id="edge_A1out_A2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#374151;strokeWidth=2;endArrow=classic;" edge="1" parent="1" source="A1_out" target="A2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="410" y="250" />
+              <mxPoint x="185" y="250" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Gate 1 YES to B1 -->
+        <mxCell id="edge_A3gate_B1" value="Yes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#82B366;strokeWidth=2;endArrow=classic;fontFamily=Segoe UI;fontSize=9;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="A3_gate" target="B1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="720" y="445" />
+              <mxPoint x="173" y="445" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Gate 1 NO loop back to A1 -->
+        <mxCell id="edge_A3gate_A1_loop" value="No - Request missing&lt;br&gt;from BlackRock team" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#B85450;strokeWidth=2;endArrow=classic;dashed=1;dashPattern=8 8;fontFamily=Segoe UI;fontSize=8;fontColor=#B85450;exitX=0;exitY=0.5;entryX=1;entryY=0.5;" edge="1" parent="1" source="A3_gate" target="A1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="660" y="385" />
+              <mxPoint x="500" y="385" />
+              <mxPoint x="500" y="60" />
+              <mxPoint x="350" y="60" />
+              <mxPoint x="350" y="195" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- B2_gate NO loop to Define Coverage -->
+        <mxCell id="edge_B2gate_cov" value="No" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#B85450;strokeWidth=2;endArrow=classic;fontFamily=Segoe UI;fontSize=9;exitX=0.5;exitY=0;" edge="1" parent="1" source="B2_gate" target="B2_cov_def">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="655" y="460" />
+              <mxPoint x="750" y="460" />
+              <mxPoint x="750" y="160" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="edge_covdef_B2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#D6B656;strokeWidth=1;endArrow=classic;dashed=1;exitX=0;exitY=0.5;entryX=0.5;entryY=0;" edge="1" parent="1" source="B2_cov_def" target="B2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="500" y="160" />
+              <mxPoint x="500" y="460" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Edge B2_out to B3 -->
+        <mxCell id="edge_B2out_B3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#374151;strokeWidth=2;endArrow=classic;" edge="1" parent="1" source="B2_out" target="B3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="775" y="530" />
+              <mxPoint x="775" y="260" />
+              <mxPoint x="930" y="260" />
+              <mxPoint x="930" y="173" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Gate 3 YES proceeds to B4 -->
+        <mxCell id="edge_B3gate_B4" value="Yes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#82B366;strokeWidth=2;endArrow=classic;fontFamily=Segoe UI;fontSize=9;exitX=0.5;exitY=1;" edge="1" parent="1" source="B3_gate" target="B4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1085" y="250" />
+              <mxPoint x="173" y="250" />
+              <mxPoint x="173" y="595" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Gate 3 NO loops back to B2 -->
+        <mxCell id="edge_B3gate_B2_loop" value="No - Refine" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#B85450;strokeWidth=2;endArrow=classic;dashed=1;dashPattern=8 8;fontFamily=Segoe UI;fontSize=8;fontColor=#B85450;exitX=1;exitY=0.5;entryX=1;entryY=0.5;" edge="1" parent="1" source="B3_gate" target="B2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1120" y="170" />
+              <mxPoint x="1120" y="533" />
+              <mxPoint x="585" y="533" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- CI/CD edge from C1_dec -->
+        <mxCell id="edge_C1dec_cicd" value="CI/CD" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#374151;strokeWidth=2;endArrow=classic;fontFamily=Segoe UI;fontSize=9;exitX=1;exitY=0.5;entryX=0.5;entryY=0;" edge="1" parent="1" source="C1_dec" target="C3_cicd">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1700" y="640" />
+              <mxPoint x="1700" y="890" />
+              <mxPoint x="1655" y="890" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- CI/CD output to C4 -->
+        <mxCell id="edge_C3out_C4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#374151;strokeWidth=2;endArrow=classic;" edge="1" parent="1" source="C3_out" target="C4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1880" y="1013" />
+              <mxPoint x="1880" y="648" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- SIDE NOTES -->
+        <!-- NOTE1: Scenario Catalog -->
+        <mxCell id="NOTE1" value="&lt;b style=&quot;font-size:11px&quot;&gt;📋 Scenario Catalog (BlackRock Standard)&lt;/b&gt;&lt;hr style=&quot;margin:5px 0&quot;&gt;&lt;ul style=&quot;margin:2px 0 0 8px;padding:0;text-align:left;font-size:8px&quot;&gt;&lt;li&gt;&lt;b&gt;Happy path:&lt;/b&gt; 200/201 + correct payload&lt;/li&gt;&lt;li&gt;&lt;b&gt;Negative:&lt;/b&gt; missing field/datatype/enum → 400&lt;/li&gt;&lt;li&gt;&lt;b&gt;Security:&lt;/b&gt; no/expired token → 401; wrong role → 403&lt;/li&gt;&lt;li&gt;&lt;b&gt;Contract:&lt;/b&gt; schema + required fields; standard error&lt;/li&gt;&lt;li&gt;&lt;b&gt;Idempotency:&lt;/b&gt; retry no duplicates; update only changed&lt;/li&gt;&lt;li&gt;&lt;b&gt;Non-functional:&lt;/b&gt; response time threshold; rate-limit 429&lt;/li&gt;&lt;/ul&gt;" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;fillColor=#FFF2CC;strokeColor=#D6B656;fontColor=#0B1F3B;fontFamily=Segoe UI;fontSize=9;position2=0;base=15;size=15;align=left;spacingLeft=8;spacingRight=8;spacingTop=4;" vertex="1" parent="1">
+          <mxGeometry x="2180" y="90" width="240" height="165" as="geometry" />
+        </mxCell>
+        
+        <!-- NOTE2: Automation Test Case Template -->
+        <mxCell id="NOTE2" value="&lt;b style=&quot;font-size:11px&quot;&gt;📝 Automation Test Case Template&lt;/b&gt;&lt;hr style=&quot;margin:5px 0&quot;&gt;&lt;ul style=&quot;margin:2px 0 0 8px;padding:0;text-align:left;font-size:8px&quot;&gt;&lt;li&gt;&lt;b&gt;Header:&lt;/b&gt; Test Case ID, Story ID, Endpoint, Method, Priority, Type&lt;/li&gt;&lt;li&gt;&lt;b&gt;Preconditions:&lt;/b&gt; env + token role&lt;/li&gt;&lt;li&gt;&lt;b&gt;Test Data:&lt;/b&gt; payload file + headers&lt;/li&gt;&lt;li&gt;&lt;b&gt;Steps:&lt;/b&gt; send request, capture response&lt;/li&gt;&lt;li&gt;&lt;b&gt;Assertions:&lt;/b&gt; status + fields + schema + time&lt;/li&gt;&lt;li&gt;&lt;b&gt;Post/cleanup:&lt;/b&gt; delete/DB cleanup&lt;/li&gt;&lt;/ul&gt;" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;fillColor=#FFF2CC;strokeColor=#D6B656;fontColor=#0B1F3B;fontFamily=Segoe UI;fontSize=9;position2=0;base=15;size=15;align=left;spacingLeft=8;spacingRight=8;spacingTop=4;" vertex="1" parent="1">
+          <mxGeometry x="2180" y="275" width="240" height="150" as="geometry" />
+        </mxCell>
+        
+        <!-- NOTE3: Skills Repo Lifecycle -->
+        <mxCell id="NOTE3" value="&lt;b style=&quot;font-size:11px&quot;&gt;📁 Skills Repo Lifecycle (~12 teams)&lt;/b&gt;&lt;hr style=&quot;margin:5px 0&quot;&gt;&lt;ul style=&quot;margin:2px 0 0 8px;padding:0;text-align:left;font-size:8px&quot;&gt;&lt;li&gt;Single shared skills repo, versioned releases&lt;/li&gt;&lt;li&gt;Branching: main → (UI/API/Swing) → feature&lt;/li&gt;&lt;li&gt;CONTRIBUTING.md + CHANGELOG.md required&lt;/li&gt;&lt;li&gt;Keep AI-driving context inside repo boundary&lt;/li&gt;&lt;li&gt;Onboarding: &quot;Getting Started&quot; prompt + walkthrough&lt;/li&gt;&lt;/ul&gt;" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;fillColor=#E1D5E7;strokeColor=#9673A6;fontColor=#0B1F3B;fontFamily=Segoe UI;fontSize=9;position2=0;base=15;size=15;align=left;spacingLeft=8;spacingRight=8;spacingTop=4;" vertex="1" parent="1">
+          <mxGeometry x="2180" y="445" width="240" height="145" as="geometry" />
+        </mxCell>
+        
+        <!-- Legend -->
+        <mxCell id="legend" value="&lt;b&gt;Legend&lt;/b&gt;" style="swimlane;whiteSpace=wrap;html=1;startSize=18;fillColor=#FFFFFF;strokeColor=#374151;fontColor=#0B1F3B;fontFamily=Segoe UI;fontSize=10;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry x="2180" y="610" width="240" height="150" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="leg1" value="Activity" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F3F4F6;strokeColor=#374151;fontColor=#0B1F3B;fontFamily=Segoe UI;fontSize=8;" vertex="1" parent="legend">
+          <mxGeometry x="10" y="25" width="65" height="22" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="leg2" value="Artifact" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;fillColor=#E6F0FF;strokeColor=#374151;fontColor=#0B1F3B;fontFamily=Segoe UI;fontSize=8;" vertex="1" parent="legend">
+          <mxGeometry x="85" y="22" width="65" height="28" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="leg3" value="Gate" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFF4D6;strokeColor=#D6B656;fontColor=#0B1F3B;fontFamily=Segoe UI;fontSize=8;" vertex="1" parent="legend">
+          <mxGeometry x="160" y="20" width="55" height="35" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="leg4" value="Success" style="shape=document;whiteSpace=wrap;html=1;boundedLbl=1;fillColor=#D5E8D4;strokeColor=#82B366;fontColor=#0B1F3B;fontFamily=Segoe UI;fontSize=8;" vertex="1" parent="legend">
+          <mxGeometry x="10" y="55" width="65" height="25" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="leg5" value="Failure/Fix" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F8CECC;strokeColor=#B85450;fontColor=#0B1F3B;fontFamily=Segoe UI;fontSize=8;" vertex="1" parent="legend">
+          <mxGeometry x="85" y="57" width="65" height="22" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="leg6" value="Data Store" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=6;fillColor=#DAE8FC;strokeColor=#6C8EBF;fontColor=#0B1F3B;fontFamily=Segoe UI;fontSize=8;" vertex="1" parent="legend">
+          <mxGeometry x="160" y="55" width="55" height="30" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="leg7" value="" style="endArrow=classic;html=1;strokeColor=#374151;strokeWidth=2;" edge="1" parent="legend">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="10" y="100" as="sourcePoint" />
+            <mxPoint x="70" y="100" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="leg7_label" value="Flow" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=8;fontColor=#0B1F3B;fontFamily=Segoe UI;" vertex="1" parent="legend">
+          <mxGeometry x="75" y="92" width="30" height="15" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="leg8" value="" style="endArrow=classic;html=1;strokeColor=#B85450;strokeWidth=2;dashed=1;dashPattern=8 8;" edge="1" parent="legend">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="115" y="100" as="sourcePoint" />
+            <mxPoint x="175" y="100" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="leg8_label" value="Feedback" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=8;fontColor=#0B1F3B;fontFamily=Segoe UI;" vertex="1" parent="legend">
+          <mxGeometry x="180" y="92" width="50" height="15" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="leg9" value="Note" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;fillColor=#FFF2CC;strokeColor=#D6B656;fontColor=#0B1F3B;fontFamily=Segoe UI;fontSize=8;position2=0;base=8;size=8;" vertex="1" parent="legend">
+          <mxGeometry x="10" y="115" width="55" height="28" as="geometry" />
+        </mxCell>
+        
+        <!-- Footer -->
+        <mxCell id="footer" value="BlackRock AI Automation Test Case Flow | Sprint 0 → Sprint 1 | UI + API + Swing | v1.0" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontStyle=2;fontColor=#6B7280;fontFamily=Segoe UI;" vertex="1" parent="1">
+          <mxGeometry x="40" y="1135" width="700" height="20" as="geometry" />
+        </mxCell>
+        
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
