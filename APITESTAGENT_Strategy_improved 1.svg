@@ -1,0 +1,366 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 2420" width="1200" height="2420" font-family="Segoe UI, Roboto, Arial, sans-serif">
+  <defs>
+    <filter id="shadow" x="-4%" y="-4%" width="108%" height="112%">
+      <feDropShadow dx="1" dy="2" stdDeviation="3" flood-opacity="0.12" flood-color="#1a202c"/>
+    </filter>
+    <filter id="shadow-lg" x="-6%" y="-6%" width="112%" height="118%">
+      <feDropShadow dx="2" dy="4" stdDeviation="6" flood-opacity="0.15" flood-color="#1a202c"/>
+    </filter>
+    <linearGradient id="headerGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2b6cb0"/>
+      <stop offset="100%" stop-color="#2c5282"/>
+    </linearGradient>
+    <linearGradient id="agentGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1a365d"/>
+      <stop offset="100%" stop-color="#2a4365"/>
+    </linearGradient>
+    <linearGradient id="phase1Grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ebf8ff"/>
+      <stop offset="100%" stop-color="#bee3f8"/>
+    </linearGradient>
+    <linearGradient id="phase2Grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fefcbf"/>
+      <stop offset="100%" stop-color="#fef3c7"/>
+    </linearGradient>
+    <linearGradient id="phase3Grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#c6f6d5"/>
+      <stop offset="100%" stop-color="#9ae6b4"/>
+    </linearGradient>
+    <linearGradient id="outcomeGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#c6f6d5"/>
+      <stop offset="100%" stop-color="#9ae6b4"/>
+    </linearGradient>
+    <linearGradient id="reportGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ebf8ff"/>
+      <stop offset="100%" stop-color="#bee3f8"/>
+    </linearGradient>
+    <linearGradient id="completionGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#48bb78"/>
+      <stop offset="100%" stop-color="#38a169"/>
+    </linearGradient>
+    <linearGradient id="extTeamGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#e9d8fd"/>
+      <stop offset="100%" stop-color="#d6bcfa"/>
+    </linearGradient>
+    <linearGradient id="proposalGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#fef3c7"/>
+      <stop offset="100%" stop-color="#fbd38d"/>
+    </linearGradient>
+    <linearGradient id="coverageGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#c6f6d5"/>
+      <stop offset="100%" stop-color="#68d391"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 1 L 9 5 L 0 9 z" fill="#4a5568"/>
+    </marker>
+    <marker id="arrow-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 1 L 9 5 L 0 9 z" fill="#e53e3e"/>
+    </marker>
+    <marker id="arrow-green" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 1 L 9 5 L 0 9 z" fill="#38a169"/>
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="2420" fill="#f7fafc" rx="12"/>
+
+  <!-- ============ TITLE ============ -->
+  <rect x="400" y="30" width="400" height="52" rx="26" fill="url(#headerGrad)" filter="url(#shadow-lg)"/>
+  <text x="600" y="62" text-anchor="middle" fill="#fff" font-size="20" font-weight="700" letter-spacing="0.5">APITestAgent Strategy</text>
+
+  <!-- ============ AGENT ARCHITECTURE ============ -->
+  <rect x="300" y="105" width="600" height="210" rx="14" fill="url(#agentGrad)" filter="url(#shadow-lg)"/>
+  <text x="320" y="128" fill="#90cdf4" font-size="12" font-weight="700" letter-spacing="1">AGENT ARCHITECTURE</text>
+
+  <rect x="320" y="140" width="175" height="60" rx="8" fill="#2d3748" stroke="#4a5568" stroke-width="1"/>
+  <text x="407" y="156" text-anchor="middle" fill="#90cdf4" font-size="10" font-weight="700">🤖 Core Engine</text>
+  <text x="407" y="170" text-anchor="middle" fill="#a0aec0" font-size="10">GitHub Copilot</text>
+  <text x="407" y="184" text-anchor="middle" fill="#718096" font-size="8">Orchestrates reasoning,</text>
+  <text x="407" y="194" text-anchor="middle" fill="#718096" font-size="8">sequencing &amp; execution</text>
+
+  <rect x="505" y="140" width="185" height="60" rx="8" fill="#2d3748" stroke="#4a5568" stroke-width="1"/>
+  <text x="597" y="156" text-anchor="middle" fill="#fbd38d" font-size="10" font-weight="700">🧩 Skills</text>
+  <text x="597" y="170" text-anchor="middle" fill="#a0aec0" font-size="9">Custom Skills (domain workflows)</text>
+  <text x="597" y="184" text-anchor="middle" fill="#718096" font-size="8">Ingestion · Validation · Generation</text>
+  <text x="597" y="194" text-anchor="middle" fill="#718096" font-size="8">Orchestration · Healing · Governance</text>
+
+  <rect x="700" y="140" width="180" height="60" rx="8" fill="#2d3748" stroke="#4a5568" stroke-width="1"/>
+  <text x="790" y="156" text-anchor="middle" fill="#9ae6b4" font-size="10" font-weight="700">📥 Inputs</text>
+  <text x="790" y="170" text-anchor="middle" fill="#a0aec0" font-size="9">Swagger / OpenAPI</text>
+  <text x="790" y="184" text-anchor="middle" fill="#a0aec0" font-size="9">Application Repo</text>
+  <text x="790" y="194" text-anchor="middle" fill="#a0aec0" font-size="9">ADO Pipelines / Env config</text>
+
+  <rect x="320" y="210" width="560" height="55" rx="8" fill="#2d3748" stroke="#4a5568" stroke-width="1"/>
+  <text x="600" y="228" text-anchor="middle" fill="#fc8181" font-size="10" font-weight="700">🛡️ Control Layer</text>
+  <text x="600" y="243" text-anchor="middle" fill="#a0aec0" font-size="9">Instructions (coding/security guardrails)  ·  Prompts (repeatable workflow playbooks)</text>
+  <text x="600" y="257" text-anchor="middle" fill="#a0aec0" font-size="9">Human review gates: proposal-first, then execute</text>
+
+  <!-- Arrow -->
+  <line x1="600" y1="315" x2="600" y2="348" stroke="#4a5568" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- ============ PHASE 1: ANALYSIS ============ -->
+  <rect x="350" y="335" width="500" height="380" rx="16" fill="url(#phase1Grad)" stroke="#90cdf4" stroke-width="1.5" opacity="0.55"/>
+  <text x="370" y="358" fill="#2b6cb0" font-size="12" font-weight="700" letter-spacing="1">PHASE 1 — BASELINE ANALYSIS</text>
+
+  <!-- Step 1: Ingest Inputs -->
+  <rect x="410" y="370" width="380" height="80" rx="10" fill="#fff" stroke="#3182ce" stroke-width="1.5" filter="url(#shadow)"/>
+  <circle cx="435" cy="398" r="12" fill="#3182ce"/>
+  <text x="435" y="403" text-anchor="middle" fill="#fff" font-size="11" font-weight="700">1</text>
+  <text x="610" y="390" text-anchor="middle" fill="#1a202c" font-size="13" font-weight="600">Ingest Inputs</text>
+  <text x="610" y="408" text-anchor="middle" fill="#718096" font-size="11">Swagger  ·  Code Repo  ·  ADO User Stories</text>
+  <text x="610" y="426" text-anchor="middle" fill="#4a5568" font-size="9">📎 Repo: agent asks for repo link (cloned in BLK Skills repo)</text>
+  <text x="610" y="440" text-anchor="middle" fill="#4a5568" font-size="9">📎 Swagger: clone repo OR upload file into BLK Skills</text>
+
+  <!-- Findings 1 (LEFT) -->
+  <line x1="410" y1="408" x2="345" y2="408" stroke="#a0aec0" stroke-width="1" stroke-dasharray="4,2"/>
+  <rect x="30" y="366" width="310" height="78" rx="6" fill="#edf2f7" stroke="#cbd5e0" stroke-width="1" stroke-dasharray="4,2" filter="url(#shadow)"/>
+  <text x="46" y="384" fill="#4a5568" font-size="9" font-weight="700">🔍 FINDINGS</text>
+  <text x="46" y="399" fill="#718096" font-size="10">• In-scope: RuleAPI, RuleAssignmentAPI</text>
+  <text x="46" y="413" fill="#718096" font-size="10">• Swagger: available (clone or upload to Skills)</text>
+  <text x="46" y="427" fill="#718096" font-size="10">• Code Repo: cloned inside Blackrock Skills repo</text>
+  <text x="46" y="441" fill="#d69e2e" font-size="10">• ADO User Stories: ⚠️ pending → Traceability Matrix</text>
+
+  <!-- Arrow -->
+  <line x1="600" y1="450" x2="600" y2="480" stroke="#4a5568" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Step 2: Analyze Framework -->
+  <rect x="410" y="482" width="380" height="56" rx="10" fill="#fff" stroke="#3182ce" stroke-width="1.5" filter="url(#shadow)"/>
+  <circle cx="435" cy="510" r="12" fill="#3182ce"/>
+  <text x="435" y="515" text-anchor="middle" fill="#fff" font-size="11" font-weight="700">2</text>
+  <text x="610" y="505" text-anchor="middle" fill="#1a202c" font-size="13" font-weight="600">Analyze Framework, Tools &amp; Coverage</text>
+  <text x="610" y="525" text-anchor="middle" fill="#718096" font-size="11">Identify what's covered, what's missing, scenario gaps</text>
+
+  <!-- Findings 2 (LEFT) -->
+  <line x1="410" y1="510" x2="345" y2="510" stroke="#a0aec0" stroke-width="1" stroke-dasharray="4,2"/>
+  <rect x="30" y="478" width="310" height="64" rx="6" fill="#edf2f7" stroke="#cbd5e0" stroke-width="1" stroke-dasharray="4,2" filter="url(#shadow)"/>
+  <text x="46" y="496" fill="#4a5568" font-size="9" font-weight="700">🔍 FINDINGS</text>
+  <text x="46" y="511" fill="#718096" font-size="10">• BDD Cucumber + Java step defs detected</text>
+  <text x="46" y="525" fill="#718096" font-size="10">• Current coverage X% → target Y%</text>
+  <text x="46" y="539" fill="#718096" font-size="10">• Untested endpoints &amp; missing scenarios identified</text>
+
+  <!-- Arrow -->
+  <line x1="600" y1="538" x2="600" y2="568" stroke="#4a5568" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- ★ NEW: Baseline Reports Output -->
+  <rect x="430" y="570" width="340" height="58" rx="10" fill="url(#reportGrad)" stroke="#3182ce" stroke-width="2" filter="url(#shadow)"/>
+  <text x="450" y="590" fill="#2b6cb0" font-size="10" font-weight="700" letter-spacing="0.5">📄 REPORTS PRODUCED</text>
+  <rect x="500" y="598" width="200" height="20" rx="4" fill="#bee3f8" stroke="#3182ce" stroke-width="1"/>
+  <text x="600" y="612" text-anchor="middle" fill="#2c5282" font-size="9" font-weight="600">Baseline Coverage Report</text>
+
+  <!-- Outcome box -->
+  <rect x="430" y="644" width="340" height="50" rx="10" fill="url(#outcomeGrad)" stroke="#38a169" stroke-width="2" filter="url(#shadow)"/>
+  <text x="450" y="666" fill="#22543d" font-size="10" font-weight="700" letter-spacing="0.5">✔ OUTCOME</text>
+  <text x="600" y="666" text-anchor="middle" fill="#22543d" font-size="11" font-weight="600" dx="18">Validated API Model with Coverage Gaps</text>
+  <text x="600" y="682" text-anchor="middle" fill="#276749" font-size="10">Reuse decisions + missing scenario categories</text>
+
+  <!-- Arrow Phase 1 → Phase 2 -->
+  <line x1="600" y1="700" x2="600" y2="736" stroke="#4a5568" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- ============ PHASE 2: SMART TEST GENERATION ============ -->
+  <rect x="350" y="718" width="500" height="820" rx="16" fill="url(#phase2Grad)" stroke="#ecc94b" stroke-width="1.5" opacity="0.45"/>
+  <text x="370" y="741" fill="#975a16" font-size="12" font-weight="700" letter-spacing="1">PHASE 2 — SMART TEST GENERATION &amp; EXECUTION</text>
+
+  <!-- Step 3: Test Data Generation -->
+  <rect x="410" y="756" width="380" height="72" rx="10" fill="url(#extTeamGrad)" stroke="#805ad5" stroke-width="1.5" stroke-dasharray="6,3" filter="url(#shadow)"/>
+  <circle cx="435" cy="784" r="12" fill="#805ad5"/>
+  <text x="435" y="789" text-anchor="middle" fill="#fff" font-size="11" font-weight="700">3</text>
+  <text x="610" y="777" text-anchor="middle" fill="#44337a" font-size="13" font-weight="600">Test Data Generation</text>
+  <rect x="475" y="785" width="270" height="18" rx="4" fill="#e9d8fd" stroke="#805ad5" stroke-width="1"/>
+  <text x="610" y="798" text-anchor="middle" fill="#553c9a" font-size="10" font-weight="700">🔜 TestDataGen Agent — PLANNED</text>
+  <text x="610" y="815" text-anchor="middle" fill="#6b46c1" font-size="10">Currently using hardcoded data from Swagger schemas</text>
+
+  <!-- Arrow -->
+  <line x1="600" y1="828" x2="600" y2="848" stroke="#4a5568" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Step 4: Generate BDD Scenarios -->
+  <rect x="410" y="850" width="380" height="86" rx="10" fill="#fff" stroke="#d69e2e" stroke-width="1.5" filter="url(#shadow)"/>
+  <circle cx="435" cy="876" r="12" fill="#d69e2e"/>
+  <text x="435" y="881" text-anchor="middle" fill="#fff" font-size="11" font-weight="700">4</text>
+  <text x="610" y="873" text-anchor="middle" fill="#1a202c" font-size="13" font-weight="600">Generate BDD Scenarios (GHCP + Skills)</text>
+  <text x="610" y="891" text-anchor="middle" fill="#718096" font-size="11">Only missing scenarios + step defs + helpers</text>
+  <text x="610" y="908" text-anchor="middle" fill="#4a5568" font-size="9" font-weight="600">BASIC: HappyPath · Negative · Boundary · Auth · State · ErrorHandling</text>
+  <text x="610" y="922" text-anchor="middle" fill="#4a5568" font-size="9" font-weight="600">ADVANCED: Multi-call · Pagination · Filters · Revisions · Bulk</text>
+
+  <!-- Arrow -->
+  <line x1="600" y1="936" x2="600" y2="952" stroke="#4a5568" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Step 5: Document Scenarios -->
+  <rect x="410" y="954" width="380" height="50" rx="10" fill="#fff" stroke="#d69e2e" stroke-width="1.5" filter="url(#shadow)"/>
+  <circle cx="435" cy="979" r="12" fill="#d69e2e"/>
+  <text x="435" y="984" text-anchor="middle" fill="#fff" font-size="11" font-weight="700">5</text>
+  <text x="610" y="984" text-anchor="middle" fill="#1a202c" font-size="13" font-weight="600">Document Scenarios to .md File</text>
+
+  <!-- Arrow -->
+  <line x1="600" y1="1004" x2="600" y2="1024" stroke="#4a5568" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Scenario Proposal Output -->
+  <rect x="440" y="1026" width="320" height="46" rx="10" fill="url(#proposalGrad)" stroke="#d69e2e" stroke-width="2" filter="url(#shadow)"/>
+  <text x="460" y="1046" fill="#975a16" font-size="10" font-weight="700">📦 OUTPUT</text>
+  <text x="600" y="1046" text-anchor="middle" fill="#744210" font-size="12" font-weight="700" dx="12">Scenario Proposal</text>
+  <text x="600" y="1063" text-anchor="middle" fill="#975a16" font-size="9">Packaged for human review</text>
+
+  <!-- Arrow -->
+  <line x1="600" y1="1072" x2="600" y2="1092" stroke="#4a5568" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Step 6: Human Review (Diamond) -->
+  <g transform="translate(600, 1148)">
+    <polygon points="0,-50 65,0 0,50 -65,0" fill="#fefcbf" stroke="#d69e2e" stroke-width="2" filter="url(#shadow)"/>
+    <text x="0" y="-8" text-anchor="middle" fill="#744210" font-size="11" font-weight="700">Human</text>
+    <text x="0" y="10" text-anchor="middle" fill="#744210" font-size="11" font-weight="700">Review</text>
+  </g>
+
+  <!-- QA Review details (LEFT) -->
+  <line x1="535" y1="1148" x2="345" y2="1148" stroke="#a0aec0" stroke-width="1" stroke-dasharray="4,2"/>
+  <rect x="30" y="1116" width="310" height="68" rx="6" fill="#fefcf0" stroke="#ecc94b" stroke-width="1" stroke-dasharray="4,2" filter="url(#shadow)"/>
+  <text x="46" y="1134" fill="#975a16" font-size="9" font-weight="700">🔍 QA REVIEW CHECKS</text>
+  <text x="46" y="1149" fill="#b7791f" font-size="10">• Scenarios make business sense</text>
+  <text x="46" y="1163" fill="#b7791f" font-size="10">• Naming/structure match project conventions</text>
+  <text x="46" y="1177" fill="#b7791f" font-size="10">• No unintended test cases added</text>
+
+  <!-- Approved Arrow -->
+  <polyline points="600,1198 600,1224 560,1224 560,1258" fill="none" stroke="#38a169" stroke-width="2" marker-end="url(#arrow-green)"/>
+  <rect x="496" y="1212" width="78" height="20" rx="4" fill="#c6f6d5" stroke="#38a169" stroke-width="1"/>
+  <text x="535" y="1226" text-anchor="middle" fill="#22543d" font-size="10" font-weight="600">Approved ✓</text>
+
+  <!-- Rejected Arrow -->
+  <polyline points="665,1148 770,1148 770,1258" fill="none" stroke="#e53e3e" stroke-width="2" stroke-dasharray="6,3" marker-end="url(#arrow-red)"/>
+  <rect x="730" y="1136" width="72" height="20" rx="4" fill="#fed7d7" stroke="#e53e3e" stroke-width="1"/>
+  <text x="766" y="1150" text-anchor="middle" fill="#9b2c2c" font-size="10" font-weight="600">Reject ✕</text>
+
+  <!-- Revise Scenarios -->
+  <rect x="700" y="1260" width="170" height="50" rx="10" fill="#fff5f5" stroke="#e53e3e" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="785" y="1280" text-anchor="middle" fill="#c53030" font-size="12" font-weight="600">Revise Scenarios</text>
+  <text x="785" y="1298" text-anchor="middle" fill="#e53e3e" font-size="9">Feedback → refines skills</text>
+
+  <!-- Loop arrow back to Step 4 -->
+  <rect x="888" y="1012" width="60" height="28" rx="5" fill="#fff5f5" stroke="#e53e3e" stroke-width="1" stroke-dasharray="3,2"/>
+  <text x="918" y="1030" text-anchor="middle" fill="#c53030" font-size="8" font-weight="700">LOOP</text>
+  <polyline points="870,1285 918,1285 918,876 790,876" fill="none" stroke="#e53e3e" stroke-width="1.5" stroke-dasharray="6,3" marker-end="url(#arrow-red)"/>
+
+  <!-- Step 7: Test Generation & Execution -->
+  <rect x="420" y="1258" width="260" height="94" rx="10" fill="#fff" stroke="#d69e2e" stroke-width="1.5" filter="url(#shadow)"/>
+  <circle cx="445" cy="1280" r="12" fill="#d69e2e"/>
+  <text x="445" y="1285" text-anchor="middle" fill="#fff" font-size="11" font-weight="700">6</text>
+  <text x="558" y="1276" text-anchor="middle" fill="#1a202c" font-size="13" font-weight="600">Test Generation &amp; Execution</text>
+  <text x="558" y="1294" text-anchor="middle" fill="#276749" font-size="9" font-weight="600">📁 Add generated BDD/scenario files to app repo</text>
+  <text x="558" y="1312" text-anchor="middle" fill="#38a169" font-size="10" font-weight="600">① Run NEW tests first → fix issues</text>
+  <text x="558" y="1328" text-anchor="middle" fill="#3182ce" font-size="10" font-weight="600">② Merge → run full regression suite</text>
+  <text x="558" y="1344" text-anchor="middle" fill="#718096" font-size="9">Validate new tests don't break existing</text>
+
+  <!-- Arrow -->
+  <line x1="550" y1="1352" x2="550" y2="1376" stroke="#4a5568" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Delta Coverage Report -->
+  <rect x="410" y="1378" width="380" height="56" rx="10" fill="url(#coverageGrad)" stroke="#38a169" stroke-width="2" filter="url(#shadow)"/>
+  <text x="435" y="1403" fill="#22543d" font-size="12">📈</text>
+  <text x="610" y="1400" text-anchor="middle" fill="#22543d" font-size="12" font-weight="700">Delta Coverage Report</text>
+  <text x="610" y="1418" text-anchor="middle" fill="#276749" font-size="9">Delta improvement in Endpoints &amp; Scenario coverage after new tests integrated</text>
+
+  <!-- Arrow -->
+  <line x1="550" y1="1434" x2="550" y2="1458" stroke="#4a5568" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Publish Reports -->
+  <rect x="420" y="1460" width="260" height="50" rx="10" fill="url(#reportGrad)" stroke="#3182ce" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="445" y="1489" fill="#2b6cb0" font-size="12">📄</text>
+  <text x="558" y="1490" text-anchor="middle" fill="#2c5282" font-size="12" font-weight="600">Publish Reports to Artifacts</text>
+
+  <!-- Arrow Phase 2 → Phase 3 -->
+  <line x1="550" y1="1510" x2="550" y2="1586" stroke="#4a5568" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- ============ PHASE 3: STABILIZATION ============ -->
+  <rect x="350" y="1566" width="500" height="310" rx="16" fill="url(#phase3Grad)" stroke="#68d391" stroke-width="1.5" opacity="0.45"/>
+  <text x="370" y="1589" fill="#22543d" font-size="12" font-weight="700" letter-spacing="1">PHASE 3 — STABILIZATION &amp; CI/CD</text>
+
+  <!-- Step 7: Self-Healing -->
+  <rect x="410" y="1604" width="380" height="50" rx="10" fill="#fff" stroke="#38a169" stroke-width="1.5" filter="url(#shadow)"/>
+  <circle cx="435" cy="1629" r="12" fill="#38a169"/>
+  <text x="435" y="1634" text-anchor="middle" fill="#fff" font-size="11" font-weight="700">7</text>
+  <text x="610" y="1634" text-anchor="middle" fill="#1a202c" font-size="13" font-weight="600">Self-Healing &amp; Stabilization</text>
+
+  <!-- Arrow -->
+  <line x1="600" y1="1654" x2="600" y2="1684" stroke="#4a5568" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Step 8: CI/CD Integration -->
+  <rect x="410" y="1686" width="380" height="50" rx="10" fill="#fff" stroke="#38a169" stroke-width="1.5" filter="url(#shadow)"/>
+  <circle cx="435" cy="1711" r="12" fill="#38a169"/>
+  <text x="435" y="1716" text-anchor="middle" fill="#fff" font-size="11" font-weight="700">8</text>
+  <text x="610" y="1716" text-anchor="middle" fill="#1a202c" font-size="13" font-weight="600">CI/CD Integration</text>
+
+  <!-- Arrow -->
+  <line x1="600" y1="1736" x2="600" y2="1766" stroke="#4a5568" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Publish Final Reports -->
+  <rect x="410" y="1768" width="380" height="50" rx="10" fill="url(#reportGrad)" stroke="#3182ce" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="435" y="1797" fill="#2b6cb0" font-size="12">📄</text>
+  <text x="610" y="1798" text-anchor="middle" fill="#2c5282" font-size="12" font-weight="600">Publish Final Reports to Artifacts</text>
+
+  <!-- Arrow -->
+  <line x1="600" y1="1818" x2="600" y2="1848" stroke="#4a5568" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Coverage Improvement Report -->
+  <rect x="380" y="1850" width="440" height="120" rx="12" fill="url(#coverageGrad)" stroke="#38a169" stroke-width="2" filter="url(#shadow-lg)"/>
+  <text x="600" y="1874" text-anchor="middle" fill="#22543d" font-size="13" font-weight="700">📈 Coverage Improvement Report</text>
+  <line x1="420" y1="1884" x2="780" y2="1884" stroke="#38a169" stroke-width="1" opacity="0.4"/>
+  <rect x="410" y="1894" width="170" height="22" rx="5" fill="#fff" stroke="#38a169" stroke-width="1"/>
+  <text x="495" y="1909" text-anchor="middle" fill="#22543d" font-size="10" font-weight="600">Updated Baseline Coverage</text>
+  <rect x="600" y="1894" width="170" height="22" rx="5" fill="#fff" stroke="#38a169" stroke-width="1"/>
+  <text x="685" y="1909" text-anchor="middle" fill="#22543d" font-size="10" font-weight="600">Coverage Delta Report</text>
+
+  <!-- Arrow -->
+  <line x1="600" y1="1914" x2="600" y2="1944" stroke="#4a5568" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Completion -->
+  <rect x="420" y="1946" width="360" height="60" rx="30" fill="url(#completionGrad)" stroke="#276749" stroke-width="2" filter="url(#shadow-lg)"/>
+  <text x="600" y="1973" text-anchor="middle" fill="#fff" font-size="15" font-weight="700">✅  Pipeline Completion</text>
+  <text x="600" y="1991" text-anchor="middle" fill="#f0fff4" font-size="11" font-weight="500">Continuous Validation Achieved</text>
+
+  <!-- ============ ARTIFACTS DELIVERED ============ -->
+  <rect x="200" y="2045" width="800" height="200" rx="12" fill="#fff" stroke="#3182ce" stroke-width="2" filter="url(#shadow-lg)"/>
+  <rect x="200" y="2045" width="800" height="32" rx="12" fill="#2b6cb0"/>
+  <rect x="200" y="2065" width="800" height="12" fill="#2b6cb0"/>
+  <text x="600" y="2068" text-anchor="middle" fill="#fff" font-size="12" font-weight="700" letter-spacing="1">📦  ARTIFACTS DELIVERED</text>
+
+  <text x="240" y="2103" fill="#1a202c" font-size="11" font-weight="600">📁  .feature files</text>
+  <text x="240" y="2119" fill="#718096" font-size="10">     Cucumber BDD scenarios (Gherkin)</text>
+
+  <text x="240" y="2141" fill="#1a202c" font-size="11" font-weight="600">☕  Java step definitions</text>
+  <text x="240" y="2157" fill="#718096" font-size="10">     Step defs + API request builders</text>
+
+  <text x="240" y="2179" fill="#1a202c" font-size="11" font-weight="600">📈  Coverage delta report</text>
+  <text x="240" y="2195" fill="#718096" font-size="10">     Before/after coverage comparison</text>
+
+  <text x="240" y="2217" fill="#1a202c" font-size="11" font-weight="600">📋  Baseline Coverage Report</text>
+  <text x="240" y="2233" fill="#718096" font-size="10">     Initial + updated baseline</text>
+
+  <text x="600" y="2103" fill="#1a202c" font-size="11" font-weight="600">📊  Test execution report</text>
+  <text x="600" y="2119" fill="#718096" font-size="10">     Cucumber HTML + JSON results</text>
+
+  <text x="600" y="2141" fill="#1a202c" font-size="11" font-weight="600">📋  Traceability matrix</text>
+  <text x="600" y="2157" fill="#718096" font-size="10">     Scenarios ↔ ADO User Stories</text>
+
+  <text x="600" y="2179" fill="#1a202c" font-size="11" font-weight="600">⚙️  CI/CD pipeline YAML</text>
+  <text x="600" y="2195" fill="#718096" font-size="10">     ADO pipeline config for regression</text>
+
+  <!-- ============ LEGEND ============ -->
+  <g transform="translate(200, 2280)">
+    <text x="0" y="14" fill="#4a5568" font-size="10" font-weight="700" letter-spacing="0.5">LEGEND</text>
+    <rect x="0" y="26" width="14" height="14" rx="3" fill="#2d3748" stroke="#4a5568" stroke-width="1"/>
+    <text x="20" y="37" fill="#4a5568" font-size="10">Agent Architecture</text>
+    <rect x="130" y="26" width="14" height="14" rx="3" fill="#ebf8ff" stroke="#3182ce" stroke-width="1"/>
+    <text x="150" y="37" fill="#4a5568" font-size="10">Baseline Analysis</text>
+    <rect x="250" y="26" width="14" height="14" rx="3" fill="#e9d8fd" stroke="#805ad5" stroke-width="1"/>
+    <text x="270" y="37" fill="#4a5568" font-size="10">External Team</text>
+    <rect x="370" y="26" width="14" height="14" rx="3" fill="#fefcbf" stroke="#d69e2e" stroke-width="1"/>
+    <text x="390" y="37" fill="#4a5568" font-size="10">Test Generation</text>
+    <rect x="490" y="26" width="14" height="14" rx="3" fill="#c6f6d5" stroke="#38a169" stroke-width="1"/>
+    <text x="510" y="37" fill="#4a5568" font-size="10">Stabilization</text>
+    <rect x="0" y="48" width="14" height="14" rx="3" fill="#edf2f7" stroke="#cbd5e0" stroke-width="1" stroke-dasharray="4,2"/>
+    <text x="20" y="59" fill="#4a5568" font-size="10">Findings</text>
+    <line x1="90" y1="55" x2="120" y2="55" stroke="#e53e3e" stroke-width="1.5" stroke-dasharray="6,3"/>
+    <text x="126" y="59" fill="#4a5568" font-size="10">Feedback / Revision Loop</text>
+    <rect x="370" y="48" width="14" height="14" rx="3" fill="url(#proposalGrad)" stroke="#d69e2e" stroke-width="1"/>
+    <text x="390" y="59" fill="#4a5568" font-size="10">Scenario Proposal</text>
+    <rect x="500" y="48" width="14" height="14" rx="3" fill="url(#coverageGrad)" stroke="#38a169" stroke-width="1"/>
+    <text x="520" y="59" fill="#4a5568" font-size="10">Coverage Report</text>
+  </g>
+</svg>
