@@ -1,0 +1,165 @@
+<mxfile host="65bd71144e">
+    <diagram id="7OHCNdAOUyU7gsZplrB4" name="BLK Web UI Automation Strategy (Garima Discussion)">
+        <mxGraphModel dx="1373" dy="907" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="tool_inputs" value="Tool Inputs&#xa;(Feature File Location if available,&#xa;Application URL, UI Repo URL)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+                    <mxGeometry x="280" width="300" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="supporting_input" value="Supporting Input&#xa;(Figma Files)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+                    <mxGeometry x="670" y="5" width="200" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="context_ingestion" value="Context Ingestion&#xa;• Collect URL and credentials&#xa;• Read repo context and Figma context&#xa;• Prepare scenario context" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+                    <mxGeometry x="350" y="140" width="320" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="dec_ado" value="ADO user story&#xa;available?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+                    <mxGeometry x="420" y="320" width="180" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="ado_to_gherkin" value="ADO User Story to&#xa;Gherkin Feature File" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+                    <mxGeometry x="220" y="510" width="220" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="existing_feature" value="Use Existing Gherkin&#xa;Feature File Scenario" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+                    <mxGeometry x="590" y="510" width="220" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="connect_blk" value="Connect to BLK Automation Repo&#xa;and Check Whether This Is&#xa;Already Automated" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+                    <mxGeometry x="370" y="660" width="280" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="dec_automated" value="Already&#xa;automated?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+                    <mxGeometry x="430" y="830" width="160" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="scenario_coverage" value="Scenario Coverage Check&#xa;(+ve, Negative, Edge Case)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+                    <mxGeometry x="210" y="1030" width="250" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="create_additional" value="Create Additional Scenario&#xa;(Missing Scenario Feature File)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+                    <mxGeometry x="580" y="1030" width="260" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="dec_coverage" value="Coverage&#xa;Sufficient?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+                    <mxGeometry x="250" y="1190" width="160" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="find_missing" value="Agent Finds &amp; Creates&#xa;Missing Scenarios&#xa;(Generate MD File)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+                    <mxGeometry x="280" y="1500" width="260" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="dec_human_review" value="Human in the Loop&#xa;Review &amp; Approve&#xa;Scenarios (MD File)" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+                    <mxGeometry x="440" y="1670" width="220" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="pom_generation" value="POM File Generation" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+                    <mxGeometry x="460" y="1930" width="220" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="playwright_agent" value="Create Playwright Test Suite with BDD Test Files&#xa;(Custom Playwright Plan Execute Healer)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+                    <mxGeometry x="410" y="2120" width="340" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="playwright_execution" value="Playwright Execution&#xa;(Run Generated Tests, Capture&#xa;Results and Failures)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+                    <mxGeometry x="440" y="2280" width="280" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="playwright_healer" value="Playwright Healer&#xa;(Auto Heal Locator or Flow Changes)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+                    <mxGeometry x="440" y="2450" width="280" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="cicd" value="CI/CD Integration&#xa;(Configure Pipeline to Run Tests,&#xa;Publish Reports and Artifacts)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+                    <mxGeometry x="430" y="2610" width="300" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="place_files" value="Place Files in Correct BLK&#xa;Automation Repo Folder Structure" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+                    <mxGeometry x="440" y="2780" width="280" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="final_output" value="Final Output&#xa;(Approved Feature File + Generated Tests&#xa;+ Execution + Healing + CI/CD Enabled)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;" parent="1" vertex="1">
+                    <mxGeometry x="410" y="2940" width="340" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="e1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;" parent="1" source="tool_inputs" target="context_ingestion" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e2" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;" parent="1" source="supporting_input" target="context_ingestion" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;" parent="1" source="context_ingestion" target="dec_ado" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e4" value="YES" style="edgeStyle=orthogonalEdgeStyle;rounded=1;fontStyle=1;fontSize=11;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="dec_ado" target="ado_to_gherkin" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e5" value="NO" style="edgeStyle=orthogonalEdgeStyle;rounded=1;fontStyle=1;fontSize=11;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="dec_ado" target="existing_feature" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;" parent="1" source="ado_to_gherkin" target="connect_blk" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;" parent="1" source="existing_feature" target="connect_blk" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;" parent="1" source="connect_blk" target="dec_automated" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e9" value="YES" style="edgeStyle=orthogonalEdgeStyle;rounded=1;fontStyle=1;fontSize=11;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="dec_automated" target="scenario_coverage" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e10" value="NO" style="edgeStyle=orthogonalEdgeStyle;rounded=1;fontStyle=1;fontSize=11;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="dec_automated" target="create_additional" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e30" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;" parent="1" source="scenario_coverage" target="dec_coverage" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;entryX=1;entryY=0;entryDx=0;entryDy=0;" parent="1" source="create_additional" target="dec_human_review" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="710" y="1130"/>
+                            <mxPoint x="710" y="1670"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e_cov_yes" value="YES" style="edgeStyle=orthogonalEdgeStyle;rounded=1;fontStyle=1;fontSize=11;fontColor=#009900;strokeColor=#009900;strokeWidth=2;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="dec_coverage" target="playwright_agent" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="100" y="1240"/>
+                            <mxPoint x="100" y="2150"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e32" value="NO" style="edgeStyle=orthogonalEdgeStyle;rounded=1;fontStyle=1;fontSize=11;" parent="1" source="dec_coverage" target="find_missing" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e33" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;" parent="1" source="find_missing" target="dec_human_review" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e35" value="Approved ✓" style="edgeStyle=orthogonalEdgeStyle;rounded=1;fontStyle=1;fontSize=11;fontColor=#009900;strokeColor=#009900;strokeWidth=2;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="dec_human_review" target="pom_generation" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e52" value="Reject ✕" style="edgeStyle=orthogonalEdgeStyle;rounded=1;fontStyle=1;fontSize=11;fontColor=#CC0000;strokeColor=#CC0000;strokeWidth=2;dashed=1;dashPattern=8 4;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="dec_human_review" target="find_missing" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="200" y="1740"/>
+                            <mxPoint x="200" y="1535"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e53" value="Reject ✕" style="edgeStyle=orthogonalEdgeStyle;rounded=1;fontStyle=1;fontSize=11;fontColor=#CC0000;strokeColor=#CC0000;strokeWidth=2;dashed=1;dashPattern=8 4;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="dec_human_review" target="create_additional">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points">
+                            <mxPoint x="900" y="1740"/>
+                            <mxPoint x="900" y="1060"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e50" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;" parent="1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="570" y="1990.9999999999995" as="sourcePoint"/>
+                        <mxPoint x="580" y="2121" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="e41" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;" parent="1" source="playwright_agent" target="playwright_execution" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e42" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;" parent="1" source="playwright_execution" target="playwright_healer" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e43" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;" parent="1" source="playwright_healer" target="cicd" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e44" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;" parent="1" source="cicd" target="place_files" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="e45" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;" parent="1" source="place_files" target="final_output" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
